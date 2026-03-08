@@ -17,5 +17,14 @@ else:
     #Remove empty rows
     data = data.dropna(how="all")
 
+    #Remove duplicate rows
+    data = data.drop_duplicates()
+
     print("\nCleaned Data:")
     print(data)
+
+    #Taking output location
+    output_file = input("\n Enter output file name (example: cleaned.csv):")
+    data.to_csv(output_file, index= False)
+
+    print("\n The cleaned file has been saved successfully!")
