@@ -1,49 +1,94 @@
 # CSV Data Cleaner
 
-A Python automation tool that cleans messy CSV datasets.
+A Python automation tool that cleans messy CSV files and prepares them for further data processing.
 
-This script loads a CSV file and prepares it for data processing by applying common cleaning operations.
+The script loads a CSV file, performs common cleaning operations, and allows the user to export a cleaned version of the dataset.
+
+---
 
 ## Features
-- Remove empty rows
-- Remove duplicate rows
-- Trim extra spaces from cells
-- Standardize column names
-- Generate a cleaning report
 
-## How It Works
+- Removes extra whitespace from text cells
+- Removes completely empty rows
+- Removes duplicate rows
+- Displays original and cleaned data preview
+- Allows the user to save the cleaned dataset to a new file
 
-The program asks the user for the CSV file path, loads the dataset using **pandas**, and performs cleaning operations automatically.
+---
 
 ## Example
 
-Messy data:
+### Input CSV
 
-Name, Age , City  
-Dia ,20 , Delhi  
-Rahul, ,Mumbai  
-Dia ,20 , Delhi  
 
-Cleaned data:
+Name, Age , City
+Dia , 20 , Delhi
+Rahul, , Mumbai
+, ,
+Dia , 20, Delhi
 
-name,age,city  
-Dia,20,Delhi  
-Rahul,,Mumbai  
+
+### Output After Cleaning
+
+
+Name,Age,City
+Dia,20,Delhi
+Rahul,,Mumbai
+
+
+---
 
 ## Technologies Used
+
 - Python
 - Pandas
 
+---
+
+## Installation
+
+Install the required library:
+
+
+pip install pandas
+
+
+---
+
 ## How to Run
 
-Install dependencies:
-- pip install pandas
+Run the script:
 
-Run the program:
-- python main.py
-- Enter the path to the CSV file when prompted.
+
+python main.py
+
+
+Then provide the CSV file path when prompted.
+
+Example:
+
+
+Enter CSV file name: sample_data.csv
+
+
+After cleaning, the program will ask where to save the cleaned file.
+
+---
+
+## Project Structure
+
+
+csv-data-cleaner
+│
+├── main.py
+├── sample_data.csv
+└── README.md
+
+
+---
 
 ## Future Improvements
-- Option to save cleaned file automatically
-- Command-line cleaning options
-- Data quality summary report
+
+- Allow users to choose specific cleaning operations
+- Generate a cleaning report (rows removed, duplicates removed)
+- Support large datasets efficiently
