@@ -1,7 +1,5 @@
-"name,  		a,  		city"
-"Dia,    		,  		delhi"
-"				"
-"Rahul, , 				mumbai"
-"				"
-"Dia,  		,  		delhi"
-"Anita,  21  		,   		Pune"
+Name,   Age , City
+Dia ,        20 , Delhi
+Rahul, ,   Mumbai
+, ,
+Dia ,    20,  Delhi
